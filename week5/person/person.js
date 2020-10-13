@@ -1,8 +1,8 @@
-import { ObservableList, Observable }                       from "../observable/observable.js";
-import { Attribute, LABEL }                                 from "../presentationModel/presentationModel.js";
-import { personListItemProjector, personFormProjector }     from "./personProjector.js";
+import {ObservableList, Observable}                                     from "../observable/observable.js";
+import {Attribute, LABEL}                                               from "../presentationModel/presentationModel.js";
+import {personListProjector, personFormProjector, personTableProjector} from "./personProjector.js";
 
-export { MasterController, MasterView, SelectionController, DetailView }
+export { MasterController, MasterView, SelectionController, DetailView };
 
 const Person = () => {                               // facade
     const firstnameAttr = Attribute("Monika");
@@ -36,12 +36,8 @@ const MasterController = () => {
 // View-specific parts
 
 const MasterView = (masterController, selectionController, rootElement) => {
-
-    const render = person =>
-        personListItemProjector(masterController, selectionController, rootElement, person);
-
-    // binding
-    masterController.onPersonAdd(render);
+    // personListProjector(masterController, selectionController, rootElement.querySelector("#listContainer"));
+    personTableProjector(masterController, selectionController, rootElement.querySelector("#tableContainer"));
 };
 
 const NoPerson = (() => { // one time creation, singleton

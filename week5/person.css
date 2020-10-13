@@ -24,10 +24,14 @@ input[type=text]:focus {
     border-color:   orange;
     outline:        transparent none 0;
 }
-#masterContainer {
+#listContainer {
     display:        grid;
     grid-column-gap: 0.5em;
     grid-template-columns: 1.7em auto auto;
+    margin-bottom:  0.5em ;
+}
+#tableContainer {
+    display:        grid;
     margin-bottom:  0.5em ;
 }
 .detail-form {
