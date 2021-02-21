@@ -81,10 +81,15 @@
         .tree div:nth-child(5) {  /* tree branches level 5 */
             transform: translateY(-280px) scale(0.25);
         }
+<<<<<<< HEAD
 
         /* Der Baum "fliegt" von unten herein*/
         .tree div span.start {
            transform: translateY(100vh);
+=======
+        .tree div span.start {
+            transform: translateY(100vh);
+>>>>>>> 86b30155cd9332b5b2114c7f04986cda5eeb07ec
         }
         .tree div span {
             position: relative;
@@ -193,7 +198,10 @@
 
     const start = () => document.querySelectorAll(".start").forEach(span => span.classList.remove("start"));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86b30155cd9332b5b2114c7f04986cda5eeb07ec
     const makeFlake = _ => ({left: Math.random() * 100, top: (Math.random()) * 100} );
     const fast   = Array.from( {length:  4}, makeFlake);
     const middle = Array.from( {length: 10}, makeFlake);
